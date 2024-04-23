@@ -17,21 +17,34 @@ public class Snake : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W)) {
-            if (_direction != Vector2.down ) {
-                _direction = Vector2.up; }
+        if (Input.GetKeyDown(KeyCode.W))
+        { // Prüft den Tastendruck W 
+            if (_direction != Vector2.down)  // Prüft, dass die Schlange nicht in die entgegengesetzte Richtung gedreht wird
+                                             // und somit mit sich selbst kollidieren würde
+            {
+                _direction = Vector2.up;   // setzt die Bewegungsrichtung nach oben
+            }
 
-        } else if (Input.GetKeyDown(KeyCode.S)) {
-            if (_direction != Vector2.up) {
-                _direction = Vector2.down; }
+        } else if (Input.GetKeyDown(KeyCode.S))  // Prüft den Tastendruck S 
+        {
+            if (_direction != Vector2.up) // Prüft, dass die Schlange nicht in die entgegengesetzte Richtung fährt und somit mit sich selbst kollidieren würde
+            {
+                _direction = Vector2.down;   // setzt die Bewegungsrichtung nach unten
+            }
 
-        } else if(Input.GetKeyDown(KeyCode.D)) {
-            if (_direction != Vector2.left) { 
-            _direction = Vector2.right; }
+        } else if(Input.GetKeyDown(KeyCode.D))  // Prüft den Tastendruck D 
+        {
+            if (_direction != Vector2.left) // Prüft, dass die Schlange nicht in die entgegengesetzte Richtung fährt und somit mit sich selbst kollidieren würde
+            {
+                _direction = Vector2.right;   // setzt die Bewegungsrichtung nach rechts
+            }
 
-        } else if (Input.GetKeyDown(KeyCode.A)) { 
-            if (_direction != Vector2.right) { 
-            _direction = Vector2.left; }
+        } else if (Input.GetKeyDown(KeyCode.A))  // Prüft den Tastendruck A
+        {
+            if (_direction != Vector2.right) // Prüft, dass die Schlange nicht in die entgegengesetzte Richtung fährt und somit mit sich selbst kollidieren würde
+            {
+                _direction = Vector2.left;   // setzt die Bewegungsrichtung nach links
+            }
         }
         }
 
@@ -40,9 +53,9 @@ public class Snake : MonoBehaviour
        
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate()  // wird nach jedem Timestep ausgeführt
     {
-        for (int i = _segments.Count - 1; i > 0; i--)
+        for (int i = _segments.Count - 1; i > 0; i--) // wiederholt die Anweisung in absteigender Reheinfolge für alle Schlangen Segmente
         {
             _segments[i].position = _segments[i - 1].position;
         }
