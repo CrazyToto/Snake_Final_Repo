@@ -57,7 +57,8 @@ public class Snake : MonoBehaviour
     {
         for (int i = _segments.Count - 1; i > 0; i--) // wiederholt die Anweisung in absteigender Reheinfolge für alle Schlangen Segmente
         {
-            _segments[i].position = _segments[i - 1].position;
+            _segments[i].position = _segments[i - 1].position; // setzt für jedes Segment die Position auf die vorherige Position
+                                                               // des weiter vorne also näher am Schlangenkopf liegenden Segment
         }
 
 
@@ -68,7 +69,7 @@ public class Snake : MonoBehaviour
             0.0f
             );
     }
-    private void grow()
+    private void grow() // Funktion um mehrere Schlangenteile anzufügen
     {
         Transform segment = Instantiate(this.segmentPrefab);
         segment.position = _segments[_segments.Count - 1].position;
