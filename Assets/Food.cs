@@ -5,12 +5,13 @@ using UnityEngine;
 public class Food : MonoBehaviour
 {
   public BoxCollider2D gridArea;
-    
+    public int score;
 
 
-    private void Start() // wird zu Beginn der 
+    private void Start() // wird beim Start des Programms ausgeführt
     {
       RandomizePosition();
+        score = 0;
     }
     private void RandomizePosition() // Funktion für das Setzten der Position des Essen
     {
@@ -32,10 +33,8 @@ public class Food : MonoBehaviour
     {   if (other.tag == "Player") // wenn das Objekt mit dem kollidiert wird den Tag Player hat, diesen hat der Schlangenkopf
         {
             RandomizePosition(); // erscheint das Essen wieder an einem neuen Ort 
-            Score Score = new Score();
-            Score.punkte = Score.punkte + 1;
+            score = score + 1;
+            print($"Score:{score}");
         }
     }
-
-
- }
+}

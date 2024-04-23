@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public string ScoreText;
-    public Text HighscoreText;
+    public string HighscoreText;
 
-    public int punkte = 0;
+    public int score = 0;
     public int highscore = 0;
 
 
