@@ -1,21 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System.Collections;           //Impotiert Lybarys
+using System.Collections.Generic;   //
+using UnityEngine;                  //
 
-public class Food : MonoBehaviour
+public class Food : MonoBehaviour   //Klasse Food
 {
-  public BoxCollider2D gridArea;
-    public int score;
+  public BoxCollider2D gridArea;    //Variable gridArea vom Typ BoxCollider2D
+    public int score;   //Variable score vom Typ int
 
 
     private void Start() // wird beim Start des Programms ausgeführt
     {
-      RandomizePosition();
-        score = 0;
+      RandomizePosition(); // Funktion für das Setzten der Position des Essen
+        score = 0;  // legt den Startwert des Scores fest
     }
     private void RandomizePosition() // Funktion für das Setzten der Position des Essen
     {
-        Bounds bounds = this.gridArea.bounds;
+        Bounds bounds = this.gridArea.bounds;   // legt die Grenzen des Spielfeldes fest
 
         float x = Random.Range(bounds.min.x, bounds.max.x); // legt die x-Position auf einen zufälligen Wert im Rahmen
         float y = Random.Range(bounds.min.y, bounds.max.y); // legt die y-Position auf einen zufälligen Wert im Rahmen
@@ -33,8 +33,7 @@ public class Food : MonoBehaviour
     {   if (other.tag == "Player") // wenn das Objekt mit dem kollidiert wird den Tag Player hat, diesen hat der Schlangenkopf
         {
             RandomizePosition(); // erscheint das Essen wieder an einem neuen Ort 
-            score = score + 1;
-            print($"Score:{score}");
+            score = score + 1;  // der Score wird um 1 erhöht
         }
     }
 }

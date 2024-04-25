@@ -1,27 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+using System.Collections;           //impotiert Lybarys
+using System.Collections.Generic;   //
+using UnityEngine;                  //
+using UnityEngine.UI;               //
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager : MonoBehaviour //Klasse ScoreManager
 {
-    public Text scoreText;                                       // tells unity wich text to use
-    public static int scoreCount;                                // Static variable to store the score
-    public Text highscoreText;                                   // tells unity wich text to use
-    public static int highscoreCount;                            // Static variable to store the highscore
+    public Text scoreText;                                       // sagt unity welchen Text zu benutzen
+    public static int scoreCount;                                // Static variable um den Score zu speichern
+    public Text highscoreText;                                   // sagt unity welchen Text zu benutzen
+    public static int highscoreCount;                            // Static variable um den Highscore zu speichern
 
 
-    // Update is called once per frame
-    void Update()
+    void Update()   //Update wird zu beginn jedes Frame aufgerufen
     {
-        if(scoreCount > highscoreCount)                          // if the score is higher than the highscore
-                                                                 // then the highscore is the score
+        if(scoreCount > highscoreCount)                          // wenn der score größer ist als der highscore
+                                                                 // wird der score zum highscore
         {                                                        //
             highscoreCount = scoreCount;                         //
             PlayerPrefs.SetInt("Highscore", highscoreCount);     //
         }
 
-        scoreText.text = "Score: " + scoreCount;                 // updates the score text
-        highscoreText.text = "Highscore: " + highscoreCount;     // updates the highscore text
+        scoreText.text = "Score: " + scoreCount;                 // Updatet den Score Text
+        highscoreText.text = "Highscore: " + highscoreCount;     // Updatet den Highscore Text
     }
 }
