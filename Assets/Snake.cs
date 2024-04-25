@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
+
 public class Snake : MonoBehaviour
 {
     private Vector2 _direction = Vector2.right;
@@ -10,6 +11,7 @@ public class Snake : MonoBehaviour
     public Transform segmentPrefab;
     public int initialSize = 4;
 
+    
     private void Start()
     {
         ResetState();
@@ -75,6 +77,7 @@ public class Snake : MonoBehaviour
         segment.position = _segments[_segments.Count - 1].position;
         _segments.Add(segment);
         
+        
     }
 
     private void ResetState()
@@ -94,6 +97,11 @@ public class Snake : MonoBehaviour
 
         this.transform.position = Vector3.zero;
     }
+
+    private void ResetScore()                      // funktion to set score to zero
+    {                                              //
+        ScoreManager.scoreCount = 0;               //
+    }                                              //
 
 //--SEHR WICHTIG-- zum benutzden Tag von allen Wänden auf "Wall" stellen
 //----------------------------------------------------------------------
@@ -142,11 +150,13 @@ public class Snake : MonoBehaviour
         if (other.tag == "Food")
         {
             grow();
+            ScoreManager.scoreCount += 1;                   // adds 1 to the score
 
         }
         else if (other.tag == "Obstacle")
         {
             ResetState();
+            ResetScore();                                   // resets the score
         }
 
           else if (other.tag == "Wall")
