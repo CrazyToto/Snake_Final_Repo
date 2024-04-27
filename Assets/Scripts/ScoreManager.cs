@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour //Klasse ScoreManager
             PlayerPrefs.SetInt("Highscore", highscoreCount);     //
         }
 
-        scoreText.text = "Score: " + scoreCount;                 // Updatet den Score Text
-        highscoreText.text = "Highscore: " + highscoreCount;     // Updatet den Highscore Text
+        scoreText.text = "" + scoreCount;                 // Updatet den Score Text
+        highscoreText.text = "" + highscoreCount;     // Updatet den Highscore Text
     }
 }
