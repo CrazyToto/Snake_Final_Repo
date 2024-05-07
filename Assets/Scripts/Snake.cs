@@ -202,10 +202,3 @@ public class Snake : MonoBehaviour  //Klasse Snake
 
 
 
-
-
-
-
-
-
-
