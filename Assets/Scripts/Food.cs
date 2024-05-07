@@ -2,7 +2,7 @@ using System.Collections;           //Impotiert Lybarys
 using System.Collections.Generic;   //
 using UnityEngine;                  //Lybary für Unity 
 
-public class Food : MonoBehaviour   //Klasse Food // MonoBehviour für Implementierung in Unity mit Start und Setup Funktionen
+public class Apple : MonoBehaviour   //Klasse Apple // MonoBehviour für Implementierung in Unity mit Start und Setup Funktionen
 {
   public BoxCollider2D gridArea;    //Variable gridArea vom Typ BoxCollider2D, dies ist die Triggerbox
     public int score;   //Variable score vom Typ int

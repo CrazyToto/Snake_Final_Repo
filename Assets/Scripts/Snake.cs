@@ -147,7 +147,7 @@ public class Snake : MonoBehaviour  //Klasse Snake
 
     private void OnTriggerEnter2D(Collider2D other) //Funktion welche aufgerufen wird, wenn die Schlange mit einem anderen Objekt kollidiert
     {
-        if (other.tag == "Food")    // Prüft ob die Schlange auf ein Apfel stößt
+        if (other.tag == "Apple")    // Prüft ob die Schlange auf ein Apfel stößt
         {
             grow(); // ruft die Funktion grow auf
             ScoreManager.scoreCount += 1;   // addiert 1 zum Score
