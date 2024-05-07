@@ -22,5 +22,5 @@ public class ScoreManager : MonoBehaviour //Klasse ScoreManager
 
         scoreText.text = "" + scoreCount;                 // Updatet den Score Text
         highscoreText.text = "" + highscoreCount;     // Updatet den Highscore Text
-    }
+    } 
 }
