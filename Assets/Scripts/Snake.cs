@@ -1,7 +1,7 @@
 using System.Collections;                    //Impotiert Libarys
 using System.Collections.Generic;            //
 using UnityEditor.Experimental.GraphView;    //
-using UnityEngine;                           //
+using UnityEngine;     
 
 
 public class Snake : MonoBehaviour  //Klasse Snake
