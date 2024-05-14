@@ -53,7 +53,7 @@ public class Snake : MonoBehaviour  //Klasse Snake
 
     private void FixedUpdate()  // wird in regelmäßigen Abständen ausgeführt
     {
-        for (int i = _segments.Count - 1; i > 0; i--)   // wiederholt die Anweisung in absteigender Reheinfolge für alle Schlangen Segmente
+        for (int i = _segments.Count -1; i > 0; i--)   // wiederholt die Anweisung in absteigender Reheinfolge für alle Schlangen Segmente
         {
             _segments[i].position = _segments[i - 1].position;  // setzt für jedes Segment die Position auf die vorherige Position
                                                                 // des weiter vorne also näher am Schlangenkopf liegenden Segment
