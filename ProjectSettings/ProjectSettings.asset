@@ -706,10 +706,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: bc0d218f-7c3f-422c-a83d-937a51c3395d
+  cloudProjectId: 25e1dd01-91f7-41ba-8010-b042cc7cebba
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Snake Final
+  projectName: Snake_Final_Repo
   organizationId: snake_final_orga
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
