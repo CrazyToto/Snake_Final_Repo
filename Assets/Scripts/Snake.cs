@@ -53,7 +53,7 @@ public class Snake : MonoBehaviour  //Klasse Snake
 
     private void FixedUpdate()  // wird in regelmäßigen Abständen ausgeführt
     {
-        for (int i = _segments.Count -1; i > 0; i--)   // wiederholt die Anweisung in absteigender Reheinfolge für alle Schlangen Segmente
+        for (int i = _segments.Count -1; i > 0; i--)            // wiederholt die Anweisung in absteigender Reheinfolge für alle Schlangen Segmente
         {
             _segments[i].position = _segments[i - 1].position;  // setzt für jedes Segment die Position auf die vorherige Position
                                                                 // des weiter vorne also näher am Schlangenkopf liegenden Segment
@@ -61,10 +61,10 @@ public class Snake : MonoBehaviour  //Klasse Snake
 
 
 
-        this.transform.position = new Vector3(  // setzt die Position des Schlangenkopfes auf die neue Position
+        this.transform.position = new Vector3(                      // setzt die Position des Schlangenkopfes auf die neue Position
             Mathf.Round(this.transform.position.x) + _direction.x,  // rundet die x-Koordinate auf die nächste ganze Zahl
             Mathf.Round(this.transform.position.y) + _direction.y,  // rundet die y-Koordinate auf die nächste ganze Zahl
-            0.0f    // setzt die z-Koordinate auf 0
+            0.0f                                                    // die z-Koordinate ist auf 0, weil wir sie im 2D Spiel nicht benötigen
             );
     }
     private void grow() // Funktion um mehrere Schlangenteile anzufügen

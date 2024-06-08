@@ -15,7 +15,7 @@ public class Apple : MonoBehaviour   //Klasse Apple // MonoBehviour für Implemen
     }
     private void RandomizePosition() // Funktion für das Setzten der Position des Essen
     {
-        Bounds bounds = this.gridArea.bounds;   // legt die Grenzen des Spielfeldes fest
+        Bounds bounds = this.gridArea.bounds;   // legt die Grenzen des Spawnfeldes fest
 
         float x = Random.Range(bounds.min.x, bounds.max.x); // legt die x-Position auf einen zufälligen Wert im Rahmen fest
         float y = Random.Range(bounds.min.y, bounds.max.y); // legt die y-Position auf einen zufälligen Wert im Rahmen fest
