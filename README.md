@@ -23,3 +23,6 @@ This Game was made for a school Projekt, but is publicly available to install on
    
 #### Another way is this: 
  [Click here](https://github.com/CrazyToto/Snake_Final_Repo) to get to my Account > click the green Button > download as Zip
+
+## Usage
+After this you can copy all the files to another folder and edit the data how you like it, or if you have any idea you would want to change on this Projekt just open a new Issue and we can talk about that
