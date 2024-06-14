@@ -1,23 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+using System.Collections;           //Libaries
+using System.Collections.Generic;   //
+using UnityEngine;                  //
+using UnityEngine.UI;               //
 
-public class Taghard : MonoBehaviour
+public class Taghard : MonoBehaviour    //Klasse Tag1
 {
-    public GameObject[] objectsToChange;
+    public GameObject[] objectsToChange;    //Array objectsToChange
 
-    void Start()
+    void Start()    //Methode Start
     {
-        Button btn = GetComponent<Button>();
-            btn.onClick.AddListener(ChangeTags);
+        Button btn = GetComponent<Button>();    //btn wird auf Button gesetzt
+        btn.onClick.AddListener(ChangeTags);    //btn wird ein EventListener hinzugefügt
     }
 
-    void ChangeTags()
+    void ChangeTags()   //Methode ChangeTags
     {
-        foreach (GameObject obj in objectsToChange)
+        foreach (GameObject obj in objectsToChange) //Für jedes GameObject in objectsToChange
         {
-                obj.tag = "Obstacle";
+                obj.tag = "Obstacle";   //Setze Tag auf Wall
         }
     }
 }
