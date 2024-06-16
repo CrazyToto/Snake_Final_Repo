@@ -29,5 +29,5 @@ After this you can copy all the files to another folder and edit the data how yo
 
 After our release you can alsways download the game without al the uneccesery data under [Releases](https://github.com/CrazyToto/Snake_Final_Repo/releases)
 
-##Movement
+## Movement
 In the game you can move by unsing the "WASD" Buttons on you keyboard. use them to change the direction of your Snake. The Snake hgoes forward by it self so you don´t have to worry about that
