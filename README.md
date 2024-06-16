@@ -28,3 +28,6 @@ This Game was made for a school Projekt, but is publicly available to install on
 After this you can copy all the files to another folder and edit the data how you like it, or if you have any idea you would want to change on this Projekt just open a new Issue and we can talk about that
 
 After our release you can alsways download the game without al the uneccesery data under [Releases](https://github.com/CrazyToto/Snake_Final_Repo/releases)
+
+##Movement
+In the game you can move by unsing the "WASD" Buttons on you keyboard. use them to change the direction of your Snake. The Snake hgoes forward by it self so you don´t have to worry about that
